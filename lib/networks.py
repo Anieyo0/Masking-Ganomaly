@@ -173,7 +173,7 @@ class NetG(nn.Module):
     def forward(self, x, masked_input=None):
         if self.opt.use_context_pred and masked_input is not None:
             # 원본 이미지를 사용해 latent_i 추출
-            # x는 원본, masked_input은 마스킹 블록가 적용된 이미지
+            # x는 원본, masked_input은 마스킹 블록이 적용된 이미지
             latent_i = self.encoder1(x)
             
             # 마스킹된 입력을 복원하고 latent_o 추출
